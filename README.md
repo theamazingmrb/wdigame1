@@ -8,16 +8,16 @@ This game is a trivia game between two players.  Minimum one player needed to pl
 
 ## Technologies Used
 
-•	HTML5
-•	CSS3
-•	JavaScript
-•	jQuery
+-	HTML5
+-	CSS3
+-	JavaScript
+-	jQuery
 
 
 ## Installation Instructions
 
-•	Download and Play in your browser
-•	Clone the Repo and open the Index.HTML file
+- Download and Play in your browser
+-	Clone the Repo and open the Index.HTML file
 
 
 ## Links
