@@ -22,6 +22,8 @@ This game is a trivia game between two players.  Minimum one player needed to pl
 
 ## Links
 
-https://github.com/theamazingmrb/wdigame1.git
-https://trello.com/b/3ZHD1fzQ/wdi-sm-43-project1
+[GitHub](https://github.com/theamazingmrb/wdigame1.git)
+
+
+[Trello](https://trello.com/b/3ZHD1fzQ/wdi-sm-43-project1)
 
