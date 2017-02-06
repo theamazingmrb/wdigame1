@@ -1,4 +1,16 @@
-console.log("wtf b")
+function startGame(){
+
+
+  setMessage("It works");
+}
+startGame();
+
+
+
+function setMessage(msg){
+  console.log("hit setmessage")
+  $('#message').text(msg);
+}
 
 
 $('.button').hover(function(){
@@ -28,13 +40,3 @@ var javascriptQuestions = [
     ["javascript question 4?", "a", "b", "c", "d", "answer"],
     ["javascript question 5?", "a", "b", "c", "d", "answer"],
   ]
-
-  var showQuestions = function(){
-    $('#gameBoard').innerhtml(sportsQuestions).eq(0).eq(1);
-  }
-  showQuestions();
-
-////////////Lets start the game
-function startGame(){
-
-}

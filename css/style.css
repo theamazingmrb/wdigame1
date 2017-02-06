@@ -1,3 +1,7 @@
+html{
+  background-color: black;
+}
+
 #bigBoard{
  background-color:yellow;
  height: 500px;
@@ -5,10 +9,16 @@
  display: inline-block;
  border: 2px solid black;
  float:left;
+ margin: 0 auto;
 
 }
 h1{
   color:red;
+  text-align: center;
+}
+h2, p{
+  color:white;
+  text-align: center;
 }
 
 #gameBoard{
@@ -20,8 +30,8 @@ margin: 0 auto;
 
 }
 .buttons{
-
-  width: 150px;
+  margin:0 auto;
+  width: 200px;
   background-color: blue;
   border: 2px solid black;
 }
@@ -29,5 +39,7 @@ margin: 0 auto;
   width: 700px;
 }
 .button{
-  display: inline-block;;
+  display: inline-block;
+  
+
 }
