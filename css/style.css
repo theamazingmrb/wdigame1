@@ -1,0 +1,33 @@
+#bigBoard{
+ background-color:yellow;
+ height: 500px;
+ width : 700px;
+ display: inline-block;
+ border: 2px solid black;
+ float:left;
+
+}
+h1{
+  color:red;
+}
+
+#gameBoard{
+  background-color: red;
+  height: 400px;
+  width: 650px;
+margin: 0 auto;
+
+
+}
+.buttons{
+
+  width: 150px;
+  background-color: blue;
+  border: 2px solid black;
+}
+#instructions{
+  width: 700px;
+}
+.button{
+  display: inline-block;;
+}
