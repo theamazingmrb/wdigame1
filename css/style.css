@@ -3,18 +3,17 @@ html{
 }
 
 #bigBoard{
- background-color:yellow;
- height: 500px;
- width : 700px;
- display: inline-block;
- border: 2px solid black;
- float:left;
+ background-color: black;
+ height: 75%;
+ width : 75%;
+ border: 2px solid red;
  margin: 0 auto;
 
 }
 h1{
-  color:red;
+  color:white;
   text-align: center;
+  text-shadow: 3px 2px 1px #FF0000;
 }
 h2, p{
   color:white;
@@ -24,22 +23,52 @@ h2, p{
 #gameBoard{
   background-color: red;
   height: 400px;
-  width: 650px;
-margin: 0 auto;
+  width: 100%;
+  margin: 0 auto;
 
 
 }
 .buttons{
   margin:0 auto;
+  text-align: center;
   width: 200px;
-  background-color: blue;
+  background-color: red;
   border: 2px solid black;
 }
 #instructions{
-  width: 700px;
+  text-align: center;
+  margin:0 auto;
+  width: 75%;
+
 }
 .button{
-  display: inline-block;
-  
+  /*display: inline-block;*/
+  margin:0 auto;
+  width: 200px;
 
+
+}
+
+#message{
+  text-align:center;
+  font-size: 30px;
+  color: white;
+  text-shadow: 3px 3px 5px red;
+}
+#question{
+  font-size: 30px;
+  text-align: center;
+  padding-top: 190px;
+  color: white;
+}
+.difficultyboxE , .difficultyboxM, .difficultyboxH{
+  font-size: 30px;
+  text-align: center;
+  text-decoration: underline;
+  color: red;
+  width: 125px;
+  height: 100px;
+  float:left;
+  padding: 5px;
+  border: 30px solid red;
 }
