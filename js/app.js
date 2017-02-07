@@ -1,8 +1,9 @@
 
 /////////////////////////////////////////// start the game
 function startGame(){
-  $('<img src="imgs/PressStart.jpg">').appendTo(".gameBoard"); 
 
+
+//  $('#gameBoard').css("background-image", "url(imgs/PressStart.jpg)");
 
   setMessage("Welcome to You Guess It!");
   setQuestion(" Please choose Start Game!")
@@ -43,11 +44,18 @@ $('.difficultyBoxE').click(function setEasyQuestions(){
 
 
   setMessage("Easy it is");
-  $('gameBoard').
-  $('.difficultyboxH').remove();
-  $('.difficultyboxM').remove();
-  $('.difficultyboxE').remove();
-  $('#question').text(sportsQuestions);
+
+  /// $('#divID').css("background-image", "url(/myimage.jpg)");
+
+  $('.difficultyboxH').css("background-color", "purple").text("sports");
+  $('.difficultyboxM').text("tacobell");
+  $('.difficultyboxE').text("michael jackson");
+
+  var question1 = sportsQuestions[1];
+  $('#question').text("Please chooose a Catagory");
+  //var catagory = [ cat1, cat2, cat3]
+
+
 })
 
 
@@ -87,6 +95,9 @@ var sportsQuestions = [
     ["sport question 4?", "a", "b", "c", "d", "answer"],
     ["sport question 5?", "a", "b", "c", "d", "answer"],
   ]
+
+
+
 var javascriptQuestions = [
     ["javascript question 1?", "a", "b", "c", "d", "answer"],
     ["javascript question 2?", "a", "b", "c", "d", "answer"],
