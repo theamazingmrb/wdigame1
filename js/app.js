@@ -2,8 +2,7 @@
 /////////////////////////////////////////// start the game
 function startGame(){
 
-
-//  $('#gameBoard').css("background-image", "url(imgs/PressStart.jpg)");
+ $('#gameBoard').css("background-image", "url(imgs/PressStart.jpg)");
 
   setMessage("Welcome to You Guess It!");
   setQuestion(" Please choose Start Game!")
@@ -32,7 +31,7 @@ function chooseDifficulty(){
 var medium = $('<div class="difficultyboxM"></div>').css("background-color","orange").text("Medium")
 $('.difficultyBoxM').append(medium);
 
-var easy = $('<div class="difficultyboxE"></div>').css("background-color","blue").text("Easy")
+var easy = $('<div class="difficultyboxE"></div>').css("background-color","blue").html("Easy")
 $('.difficultyBoxE').append(easy);
 
 
@@ -47,9 +46,10 @@ $('.difficultyBoxE').click(function setEasyQuestions(){
 
   /// $('#divID').css("background-image", "url(/myimage.jpg)");
 
-  $('.difficultyboxH').css("background-color", "purple").text("sports");
-  $('.difficultyboxM').text("tacobell");
-  $('.difficultyboxE').text("michael jackson");
+  // $('quest')
+  $('.difficultyboxH').css("background-color", "white").html("SPORTS");
+  $('.difficultyboxM').css("background-color", "white").text("TACOBELL");
+  $('.difficultyboxE').css("background-color", "white").text("MICHAEL JACKSON");
 
   var question1 = sportsQuestions[1];
   $('#question').text("Please chooose a Catagory");
@@ -57,7 +57,7 @@ $('.difficultyBoxE').click(function setEasyQuestions(){
 
 
 })
-
+/////////////////////////////// sportsQuestions
 
 
 
@@ -75,7 +75,7 @@ $('.button').hover(function(){
 });
 
 
-//////////////////////////creats click for both buttons
+//////////////////////////creats click for both buttons reset and new game
 $('.button:first').click(function(){
   startGame();
   $('#bigBoard').css("background-color", "black")
@@ -89,12 +89,12 @@ $('.button:last').click(function(){
 //////////////////////////////////////////////////// Game LOGIX
 
 var sportsQuestions = [
-    ["sport question 1?", "a", "b", "c", "d", "answer"],
+    ["Where do the Lakers play?", "Staples Center", "Clippers center", "My Moms house", "Taco Bell Arena", "answer"],
     ["sport question 2?", "a", "b", "c", "d", "answer"],
     ["sport question 3?", "a", "b", "c", "d", "answer"],
     ["sport question 4?", "a", "b", "c", "d", "answer"],
     ["sport question 5?", "a", "b", "c", "d", "answer"],
-  ]
+  ];
 
 
 
@@ -104,4 +104,7 @@ var javascriptQuestions = [
     ["javascript question 3?", "a", "b", "c", "d", "answer"],
     ["javascript question 4?", "a", "b", "c", "d", "answer"],
     ["javascript question 5?", "a", "b", "c", "d", "answer"],
-  ]
+  ];
+function test(){
+  console.log(sportsQuestions[1])
+}

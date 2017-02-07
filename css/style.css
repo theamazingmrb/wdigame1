@@ -1,5 +1,5 @@
 html{
-  background-color: black;
+  background-color: #e8e8e8;
 }
 
 #bigBoard{
@@ -16,12 +16,12 @@ h1{
   text-shadow: 3px 2px 1px #FF0000;
 }
 h2, p{
-  color:white;
+  color:black;
   text-align: center;
 }
 
 #gameBoard{
-  background-color: red;
+  background-color: inherit;
   height: 400px;
   width: 100%;
   margin: 0 auto;
@@ -66,9 +66,10 @@ h2, p{
   text-align: center;
   text-decoration: underline;
   color: red;
-  width: 125px;
-  height: 100px;
-  float:left;
+  width: 32%;
+  /*height: 100px;*/
+  float: left;
   padding: 5px;
-  border: 30px solid red;
+  margin: 0 auto;
+  border: 1px solid black;
 }
