@@ -2,13 +2,14 @@
 /////////////////////////////////////////// start the game
 function startGame(){
 
- $('#gameBoard').css("background-image", "url(imgs/PressStart.jpg)");
+ //$('#gameBoard').css("background-image", "url(imgs/PressStart.jpg)");
 
   setMessage("Welcome to You Guess It!");
   setQuestion(" Please choose Start Game!")
-  $('.difficultyBoxH').empty();
-  $('.difficultyBoxM').empty();
-  $('.difficultyBoxE').empty();
+  $('.difficultyBoxH').hide();
+  $('.difficultyBoxM').hide();
+  $('.difficultyBoxE').hide();
+  $('#gameBoard').css("background-image", "none");
 
 
 
@@ -23,6 +24,10 @@ function setQuestion(ques){
 function chooseDifficulty(){
   setMessage("Please choose your difficulty")
 
+  $('.difficultyBoxH').show();
+  $('.difficultyBoxM').show();
+  $('.difficultyBoxE').show();
+
   setQuestion("") // this works to change the text
   $('.difficultyBoxH').css("background-color","white").text("Hard")
 
@@ -32,6 +37,8 @@ function chooseDifficulty(){
 
 
   $('.difficultyBoxE').css("background-color","blue").html("Easy")
+
+
 
 
 
@@ -59,11 +66,86 @@ $('.difficultyBoxE').click(function setEasyQuestions(){
 })
 /////////////////////////////// sportsQuestions
 function setSportsQ(){
-  setQuestion(sportsQuestions.question);
+  setMessage("Question 1")
 
+
+  setQuestion(sportsQuestion1.question);
+  $('.difficultyBoxH').css("background-color", "white").text("C: " + sportsQuestion1.c);
+  $('.difficultyBoxM').css("background-color", "white").text("B: " + sportsQuestion1.b);
+  $('.difficultyBoxE').css("background-color", "white").text("A: " + sportsQuestion1.correct);
+  $('.difficultyBoxE').click(correctAnswer);
+  $('.difficultyBoxM').click(wrongAnswer);
+  $('.difficultyBoxH').click(wrongAnswer);
 
 }
+///////////////////questtion 2
 
+function setSportsQ2(){
+  setMessage("Question 2")
+  $('#gameBoard').css("background-image", "none");
+
+
+
+  setQuestion(sportsQuestion2.question);
+  $('.difficultyBoxH').css("background-color", "white").text("C: " + sportsQuestion2.c);
+  $('.difficultyBoxM').css("background-color", "white").text("B: " + sportsQuestion2.b);
+  $('.difficultyBoxE').css("background-color", "white").text("A: " + sportsQuestion2.correct);
+
+  $('.difficultyBoxH').show()
+  $('.difficultyBoxM').show()
+  $('.difficultyBoxE').show()
+
+  $('.difficultyBoxE').click(correctAnswer);
+  $('.difficultyBoxM').click(wrongAnswer);
+  $('.difficultyBoxH').click(wrongAnswer);
+
+}
+/////////////// correct function
+function correctAnswer(){
+
+
+    setMessage("YAY")
+    setQuestion("")
+    $('.difficultyBoxH').hide()
+    $('.difficultyBoxM').hide()
+    $('.difficultyBoxE').hide()
+    $('#gameBoard').css("background-image", "url(imgs/correct1.jpeg)");
+
+    setTimeout( function(){
+    nextQuestion()
+  }  , 5000 );
+
+ }
+
+ /////////////////////////nextQuestion function
+ function nextQuestion(){
+   $('#gameBoard').css("background-image", "none");
+   setMessage("Next Question in 5 seconds")
+   setTimeout( function(){
+
+     setSportsQ2()
+
+   }  , 5000 );
+
+
+ }
+
+ /////////////wrong answer
+ function wrongAnswer(){
+
+
+     setMessage("BOOOOOOOOOOOO")
+     setQuestion("")
+     $('.difficultyBoxH').hide()
+     $('.difficultyBoxM').hide()
+     $('.difficultyBoxE').hide()
+     $('#gameBoard').css("background-image", "url(imgs/incorrect3.jpg)");
+
+     setTimeout( function(){
+      setSportsQ2()
+   }  , 5000 );
+
+  }
 
 //////////////////////// sets message function
 
@@ -92,4 +174,5 @@ $('.button:last').click(function(){
 });
 //////////////////////////////////////////////////// Game LOGIX
 
-var sportsQuestions = {question: 'Where do the Lakers play?', a: 'Staples Center', b: 'Clippers center', c:'My Moms house', d:'Taco Bell Arena'};
+var sportsQuestion1 = {question: 'Where do the Lakers play?', correct: 'Staples Center', b: 'Clippers center', c:'My Moms house', d:'Taco Bell Arena'};
+var sportsQuestion2 = {question: 'Where do the Dodgers play?', correct: 'Dodger Field', b: 'Dodgers center', c:'Dodger Stadium', d:'Taco Bell Arena'};
