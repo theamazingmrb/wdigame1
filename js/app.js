@@ -6,9 +6,9 @@ function startGame(){
 
   setMessage("Welcome to You Guess It!");
   setQuestion(" Please choose Start Game!")
-  $('.difficultyboxH').remove();
-  $('.difficultyboxM').remove();
-  $('.difficultyboxE').remove();
+  $('.difficultyBoxH').empty();
+  $('.difficultyBoxM').empty();
+  $('.difficultyBoxE').empty();
 
 
 
@@ -23,16 +23,16 @@ function setQuestion(ques){
 function chooseDifficulty(){
   setMessage("Please choose your difficulty")
 
-  setQuestion("Easy, " + " Medium," + " Hard") // this works to change the text
-  var hard = $('<div class="difficultyboxH"></div>').css("background-color","white").text("Hard")
-  $('.difficultyBoxH').append(hard);
+  setQuestion("") // this works to change the text
+  $('.difficultyBoxH').css("background-color","white").text("Hard")
 
 
-var medium = $('<div class="difficultyboxM"></div>').css("background-color","orange").text("Medium")
-$('.difficultyBoxM').append(medium);
 
-var easy = $('<div class="difficultyboxE"></div>').css("background-color","blue").html("Easy")
-$('.difficultyBoxE').append(easy);
+  $('.difficultyBoxM').css("background-color","orange").text("Medium")
+
+
+  $('.difficultyBoxE').css("background-color","blue").html("Easy")
+
 
 
 
@@ -47,18 +47,22 @@ $('.difficultyBoxE').click(function setEasyQuestions(){
   /// $('#divID').css("background-image", "url(/myimage.jpg)");
 
   // $('quest')
-  $('.difficultyboxH').css("background-color", "white").html("SPORTS");
-  $('.difficultyboxM').css("background-color", "white").text("TACOBELL");
-  $('.difficultyboxE').css("background-color", "white").text("MICHAEL JACKSON");
+  $('.difficultyBoxH').css("background-color", "white").html("MICHAEL JACKSON");
+  $('.difficultyBoxM').css("background-color", "white").text("TACOBELL");
+  $('.difficultyBoxE').css("background-color", "white").html("SPORTS").click(setSportsQ);
 
-  var question1 = sportsQuestions[1];
+
   $('#question').text("Please chooose a Catagory");
   //var catagory = [ cat1, cat2, cat3]
 
 
 })
 /////////////////////////////// sportsQuestions
+function setSportsQ(){
+  setQuestion(sportsQuestions.question);
 
+
+}
 
 
 //////////////////////// sets message function
@@ -88,23 +92,4 @@ $('.button:last').click(function(){
 });
 //////////////////////////////////////////////////// Game LOGIX
 
-var sportsQuestions = [
-    ["Where do the Lakers play?", "Staples Center", "Clippers center", "My Moms house", "Taco Bell Arena", "answer"],
-    ["sport question 2?", "a", "b", "c", "d", "answer"],
-    ["sport question 3?", "a", "b", "c", "d", "answer"],
-    ["sport question 4?", "a", "b", "c", "d", "answer"],
-    ["sport question 5?", "a", "b", "c", "d", "answer"],
-  ];
-
-
-
-var javascriptQuestions = [
-    ["javascript question 1?", "a", "b", "c", "d", "answer"],
-    ["javascript question 2?", "a", "b", "c", "d", "answer"],
-    ["javascript question 3?", "a", "b", "c", "d", "answer"],
-    ["javascript question 4?", "a", "b", "c", "d", "answer"],
-    ["javascript question 5?", "a", "b", "c", "d", "answer"],
-  ];
-function test(){
-  console.log(sportsQuestions[1])
-}
+var sportsQuestions = {question: 'Where do the Lakers play?', a: 'Staples Center', b: 'Clippers center', c:'My Moms house', d:'Taco Bell Arena'};
