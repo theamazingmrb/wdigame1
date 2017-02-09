@@ -4,7 +4,7 @@ html{
 
 #bigBoard{
  background-color: black;
- height: 75%;
+ height: 100%;
  width : 75%;
  border: 2px solid red;
  margin: 0 auto;
@@ -80,7 +80,7 @@ h2, p{
   background-color: gold;
 }
 li{
-  margin:0 auto;  
+  margin:0 auto;
   color:BLACK;
   border: 1px solid black;
   width: 40%;

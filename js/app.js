@@ -112,7 +112,7 @@ $('li').click(function(){
 
  }
   else{
-    messageBox("Nope, next Question in 5 seconds")
+    messageBox("Nope, next Question in 5 second ")
 
 
     setTimeout(function(){
@@ -125,6 +125,11 @@ $('li').click(function(){
 function whoWon(){
 //score = $('#p1score').txt;
   if($score>2){
+    $('#bigBoard').css("height", "500px");
+    $('#bigBoard').css("background-image", "url(imgs/we-have-a-winner.png)");
+    $('ul').hide();
+    $('#gameBoard').hide();
+
     alert("you won!")
   }
 }
