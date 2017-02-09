@@ -1,4 +1,5 @@
 var $clickedAnswer;
+$('html,body').css('cursor','crosshair');
 var $score = 0;
 var turn = 1;
 var $player1;
@@ -65,7 +66,7 @@ function messageBox(msg) {
   $('#message').text(msg);
 }
 
-///////////working with start and reset B
+///////////working with start button
 $('.button:first').click(function() {
   $('#bigBoard').css("background-color", "blue")
   newGame()
@@ -73,9 +74,15 @@ $('.button:first').click(function() {
 
 
 });
-
+////////////// reset button
 $('.button:last').click(function() {
-  startGame();
+  $('#bigBoard').css("background-color", "black");
+  $('ul').show();
+  $('#gameBoard').show();
+  $score==="0";
+
+startGame()
+
 });
 ///////////////////////////new Game
 function newGame(){
@@ -96,6 +103,7 @@ questionBox(currentQuestion.question)
 
 /////////////////funciton for correct answers
 $('li').click(function(){
+   whoWon();
    $clickedAnswer = $(this).text()
    if($clickedAnswer === currentQuestion[currentQuestion.answer]){
 
@@ -112,6 +120,7 @@ $('li').click(function(){
 
  }
   else{
+    whoWon();
     messageBox("Nope, next Question in 5 second ")
 
 
@@ -125,10 +134,13 @@ $('li').click(function(){
 function whoWon(){
 //score = $('#p1score').txt;
   if($score>2){
-    $('#bigBoard').css("height", "500px");
-    $('#bigBoard').css("background-image", "url(imgs/we-have-a-winner.png)");
-    $('ul').hide();
-    $('#gameBoard').hide();
+
+    messageBox("Congrats you won!!")
+    $('#bigBoard').css("height", "500px")
+    $('#bigBoard').css("background-image", "url(imgs/we-have-a-winner.png)")
+    //newGame.stop();
+    $('ul').hide()
+    $('#gameBoard').remove();
 
     alert("you won!")
   }
