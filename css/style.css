@@ -13,7 +13,10 @@ img {
 }
 
 #sportBox:visited {
-  background-color: green;
+  color: gold;
+}
+#sportBox:visited {
+  color: gold;
 }
 
 #bigBoard {

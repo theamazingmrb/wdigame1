@@ -223,7 +223,7 @@ function newGame() {
   $('#sportBox').css("height", "100px");
   $('#sportBox').css("width", "200px");
   $('#sportBox').on("click", function() {
-
+  $('#sportBox').unbind("click");
     catagoryChoice($sportsQuestion)
   });
 
@@ -231,8 +231,9 @@ function newGame() {
   $('#mathBox').css("background-color", "#e8e8e8");
   $('#mathBox').css("height", "100px");
   $('#mathBox').css("width", "200px");
-  $('#mathBox').on("click", function() {
 
+  $('#mathBox').on("click", function() {
+    $('#math').unbind("click");
     catagoryChoice($mathQuestion);
   });
 
@@ -314,7 +315,11 @@ function newGame() {
       alert("you won!")
     }
     if ($wrongAnswer === 5) {
-      console.log("game over");
+      messageBox("You Failed")
+      $('#bigBoard').css("height", "500px")
+      $('#bigBoard').css("background-image", "url(imgs/loserimg.jpg)")
+      $('ul').hide()
+      $('#gameBoard').remove();
       alert("it overrrrrrr");
     }
   }
