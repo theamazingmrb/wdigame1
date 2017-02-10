@@ -166,6 +166,87 @@ var $mathQuestion = [{
     answer: "c",
   }
 ]
+var $5gradeQuestion = [{
+    question: "What does the Latin affix “tend” mean as in “extend”?",
+    a: "stretch",
+    b: "nurture",
+    c: "'ten' + 'd'",
+    d: "disposed",
+    answer: "a"
+  },
+  {
+    question: "How many nouns are in the following sentence? “The rabbit ran to the cafeteria and ate a big salad”? ",
+    a: "4",
+    b: "2",
+    c: "3",
+    d: "5",
+    answer: "c"
+  },
+  {
+    question: "What is the decimal equivalent of 4/8?",
+    a: ".5",
+    b: ".8",
+    c: ".3",
+    d: ".25",
+    answer: "a"
+  },
+  {
+    question: "Which of the following is a synonym for “earn”?",
+    a: "obtain",
+    b: "gather",
+    c: "take",
+    d: "loss",
+    answer: "a",
+  },
+  {
+    question: "What is the numeric value of the Roman numeral “XIX”?",
+    a: "21",
+    b: "10110",
+    c: "1019",
+    d: "19",
+    answer: "d",
+  },
+  {
+    question: "Wolfgang Amadeus Mozart composed music during which period?",
+    a: "Contemporary",
+    b: "Baroque",
+    c: "Classical",
+    d: "Renaissance",
+    answer: "c",
+  },
+  {
+    question: "5 to the power of 0 equals what?",
+    a: "5",
+    b: "1",
+    c: "0",
+    d: "2",
+    answer: "b",
+  },
+  {
+    question: "How many sides does a nonagon have?",
+    a: "9",
+    b: "0",
+    c: "12",
+    d: "7",
+    answer: "a",
+  },
+  {
+    question: "What part of the plant is a carrot?",
+    a: "Orange",
+    b: "Stem",
+    c: "carrot",
+    d: "Root",
+    answer: "d",
+  },
+  {
+    question: "On the periodic table, what element is represented by the letters “Ti”?",
+    a: "Tellurium	",
+    b: "Tantalum",
+    c: "Titanium",
+    d: "Thalium",
+    answer: "c",
+  }
+]
 /////////////////////////////////////////// start the game
 function startGame() {
 
@@ -234,7 +315,17 @@ function newGame() {
   $('#mathBox').css("width", "200px");
 
   $('#mathBox').on("click", function() {
-  $('#math').unbind("click");
+  $('#mathBox').unbind("click");
+    catagoryChoice($mathQuestion);
+  });
+
+  $('#answers').append('<div id="fthBox" class="difficultybox">Smarter than a 5th Grader</div>');
+  $('#fthBox').css("background-color", "#e8e8e8");
+  $('#fthBox').css("height", "100px");
+  $('#fthBox').css("width", "200px");
+
+  $('#fthBox').on("click", function() {
+  $('#fthBox').unbind("click");
     catagoryChoice($mathQuestion);
   });
 
