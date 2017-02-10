@@ -1,5 +1,5 @@
 html {
-  background-color: #e8e8e8;
+  background-color: #c7ced8;
 }
 
 img {
@@ -18,12 +18,17 @@ img {
 #sportBox:visited {
   color: gold;
 }
-
+.clearfix {
+   content: " "; /* Older browser do not support empty content */
+   display: block;
+   height: 0;
+   clear: both;
+}
 #bigBoard {
   background-color: black;
   height: 100%;
   width: 75%;
-  border: 2px solid red;
+  border: 2px solid black;
   margin: 0 auto;
 }
 
@@ -46,11 +51,11 @@ h2, p {
 }
 
 .buttons {
-  margin: 0 auto;
-  text-align: center;
+  margin: 0 100px auto;
   width: 200px;
-  background-color: red;
+  background-color: #abebc6;
   border: 2px solid black;
+  float:left;
 }
 
 #instructions {
@@ -60,9 +65,14 @@ h2, p {
 }
 
 .button {
-  /*display: inline-block;*/
+  width: 200px;
+}
+.scoreBoard {
+
   margin: 0 auto;
   width: 200px;
+  background-color: #abebc6;
+  border: 2px solid black;
 }
 
 #message {
@@ -71,7 +81,7 @@ h2, p {
   text-align: center;
   font-size: 30px;
   color: white;
-  text-shadow: 3px 3px 5px red;
+  text-shadow: 3px 3px 5px black;
   padding-top: 100px;
 }
 
@@ -81,23 +91,11 @@ h2, p {
   color: white;
 }
 
-.scoreBoard {
-  width: 200px;
-  background-color: yellow
-}
-
-.p1score .p2score {
-  height: 100%;
-  width: 50%;
-}
-
 #p1score {
   background-color: silver;
 }
 
-#p2score {
-  background-color: gold;
-}
+
 
 li {
   margin: 0 auto;
@@ -108,7 +106,7 @@ li {
 }
 
 li:hover {
-  background-color: green;
+  background-color: #abebc6;
 }
 
 ul {

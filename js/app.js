@@ -4,7 +4,6 @@ var $score = 0;
 var $wrongAnswer = 0;
 var turn = 1;
 var $player1;
-var $player2;
 var $sportsQuestion = [{
     question: "Where do the Lakers play?",
     a: "Staples Center",
@@ -22,7 +21,7 @@ var $sportsQuestion = [{
     answer: "c"
   },
   {
-    question: "What sport does Lionel Messy play",
+    question: "What sport does Lionel Messi play?",
     a: "FootBall",
     b: "BaseBall",
     c: "Soccer",
@@ -46,7 +45,7 @@ var $sportsQuestion = [{
     answer: "a",
   },
   {
-    question: "What number did Michael Jordan never wear proffesionally",
+    question: "What number did Michael Jordan never wear professionally?",
     a: "45",
     b: "12",
     c: "23",
@@ -54,7 +53,7 @@ var $sportsQuestion = [{
     answer: "d",
   },
   {
-    question: "Which quarterback does not have at least 4 wins in a superbowl?",
+    question: "Which quarterback does not have at least 4 wins in a Superbowl?",
     a: "Terry Bradshaw",
     b: "Peyton Manning",
     c: "Joe Montana",
@@ -62,7 +61,7 @@ var $sportsQuestion = [{
     answer: "b",
   },
   {
-    question: "What is the most amount of points a single player has scored in a NBA game",
+    question: "What is the most amount of points a single player has scored in a NBA game?",
     a: "100",
     b: "93",
     c: "78",
@@ -78,7 +77,7 @@ var $sportsQuestion = [{
     answer: "d",
   },
   {
-    question: "What Year did Kobe Bryant Retire",
+    question: "What Year did Kobe Bryant Retire?",
     a: "2016",
     b: "2020",
     c: "GOAT",
@@ -104,11 +103,11 @@ var $mathQuestion = [{
   },
   {
     question: "Solve for x: x+1 = 3",
-    a: "F",
-    b: "BaseBall",
-    c: "Soccer",
-    d: "LaCross",
-    answer: "c"
+    a: "2",
+    b: "4",
+    c: "1/3",
+    d: "8",
+    answer: "a"
   },
   {
     question: "If apples===oranges, and oranges===tacos, what color is purple?",
@@ -119,52 +118,52 @@ var $mathQuestion = [{
     answer: "a",
   },
   {
-    question: "Who won the Wolrd Cup in 2014?",
-    a: "Germany",
-    b: "USA",
-    c: "Spain",
-    d: "Brazil",
+    question: "2. If A is substituted by 4, B by 3, C by 2, D by 4, E by 3, F by 2 and so on, then what will be total of the numerical values of the letters of the word SICK?",
+    a: "11",
+    b: "12",
+    c: "13",
+    d: "14",
     answer: "a",
   },
   {
-    question: "What number did Michael Jordan never wear proffesionally",
-    a: "45",
-    b: "12",
-    c: "23",
-    d: "9",
+    question: " What comes after a million, billion and trillion?",
+    a: "pentillion",
+    b: "A zillion",
+    c: "A bajillion",
+    d: "A quadrillion",
     answer: "d",
   },
   {
-    question: "Which quarterback does not have at least 4 wins in a superbowl?",
-    a: "Terry Bradshaw",
-    b: "Peyton Manning",
-    c: "Joe Montana",
-    d: "Tom Brady",
+    question: "5 to the power of 0 equals what?",
+    a: "5",
+    b: "1",
+    c: "0",
+    d: "2",
     answer: "b",
   },
   {
-    question: "What is the most amount of points a single player has scored in a NBA game",
-    a: "100",
-    b: "93",
-    c: "78",
-    d: "81",
+    question: "How many sides does a nonagon have?",
+    a: "9",
+    b: "0",
+    c: "12",
+    d: "7",
     answer: "a",
   },
   {
-    question: "What number lies between 5 and 9 on a British dart board?",
-    a: "11",
-    b: "9",
-    c: "10",
-    d: "12",
+    question: "If you take the number 1, add 1 to it, add 2 to it, add 4 to it, and devide it by 2 what number do we now have?",
+    a: "8",
+    b: "7",
+    c: "4",
+    d: "2",
     answer: "d",
   },
   {
-    question: "What Year did Kobe Bryant Retire",
-    a: "2016",
-    b: "2020",
-    c: "GOAT",
-    d: "2015",
-    answer: "a",
+    question: "If there are 3 apples, and you take 2 away how many apples do you have?",
+    a: "3",
+    b: "1",
+    c: "2",
+    d: "0",
+    answer: "c",
   }
 ]
 /////////////////////////////////////////// start the game
@@ -179,6 +178,7 @@ function startGame() {
 
 }
 $('#p1score').text("Player 1 Score:" + $score);
+$('#wrongAnswer').text("Incorrect:" + $wrongAnswer);
 //  $('#p2score').text("Player 2 Score:" + $score);
 startGame();
 
@@ -220,6 +220,7 @@ function newGame() {
   //$('#gameBoard').css("background-image", "url(imgs/PressStart.jpg)");
   $('#answers').text("").append('<div id="sportBox" class="difficultybox">SPORTS</div>');
   $('#sportBox').css("background-color", "#e8e8e8");
+
   $('#sportBox').css("height", "100px");
   $('#sportBox').css("width", "200px");
   $('#sportBox').on("click", function() {
@@ -233,7 +234,7 @@ function newGame() {
   $('#mathBox').css("width", "200px");
 
   $('#mathBox').on("click", function() {
-    $('#math').unbind("click");
+  $('#math').unbind("click");
     catagoryChoice($mathQuestion);
   });
 
@@ -254,7 +255,7 @@ function newGame() {
       $ul.append('<li>' + currentQuestion.d + '</li>')
 
       $('li').click(function() {
-        //whoWon();
+       $('li').unbind("click");
         $clickedAnswer = $(this).text()
         if ($clickedAnswer === currentQuestion[currentQuestion.answer]) {
 
@@ -272,14 +273,18 @@ function newGame() {
 
         } else if ($clickedAnswer !== currentQuestion[currentQuestion.answer]) {
           //whoWon();
+
           messageBox("Nope, next Question in 3 second ")
           questionBox("The Correct Answer is : " + currentQuestion[currentQuestion.answer])
+
           $wrongAnswer++;
-          whoWon();
+           whoWon();
+           $('#wrongAnswer').text("Incorrect:" + $wrongAnswer);
 
           setTimeout(function() {
             catagoryChoice(catagory)
           }, 3000);
+
 
         } else {
           messageBox("Next Catagory in 3 seconds ")
