@@ -19,7 +19,11 @@ This game is a trivia game between two players.  Minimum one player needed to pl
 - Download and Play in your browser
 -	Clone the Repo and open the Index.HTML file
 
+## Wire Frames
 
+![alt text](https://raw.githubusercontent.com/theamazingmrb/wdigame1/master/assets/WireFrames/w1.jpg "Wireframe1")
+![alt text](https://raw.githubusercontent.com/theamazingmrb/wdigame1/master/assets/WireFrames/w2.jpg "Wireframe2")
+![alt text](https://raw.githubusercontent.com/theamazingmrb/wdigame1/master/assets/WireFrames/w3.jpg "Wireframe3")
 ## Links
 
 [GitHub](https://github.com/theamazingmrb/wdigame1.git)
