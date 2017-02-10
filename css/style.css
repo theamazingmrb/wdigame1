@@ -1,95 +1,114 @@
-html{
+html {
   background-color: #e8e8e8;
 }
 
-#bigBoard{
- background-color: black;
- height: 100%;
- width : 75%;
- border: 2px solid red;
- margin: 0 auto;
-
+img {
+  height: 100px;
 }
-h1{
-  color:white;
+
+#sportBox, #mathBox {
+  color: black;
+  display: inline-block;
+  border: 5px solid black;
+}
+
+#sportBox:visited {
+  background-color: green;
+}
+
+#bigBoard {
+  background-color: black;
+  height: 100%;
+  width: 75%;
+  border: 2px solid red;
+  margin: 0 auto;
+}
+
+h1 {
+  color: white;
   text-align: center;
   text-shadow: 3px 2px 1px #FF0000;
 }
-h2, p{
-  color:black;
+
+h2, p {
+  color: black;
   text-align: center;
 }
 
-#gameBoard{
+#gameBoard {
   background-color: inherit;
   height: 90%;
   width: 100%;
   margin: 0 auto;
-
-
 }
-.buttons{
-  margin:0 auto;
+
+.buttons {
+  margin: 0 auto;
   text-align: center;
   width: 200px;
   background-color: red;
   border: 2px solid black;
 }
-#instructions{
+
+#instructions {
   text-align: center;
-  margin:0 auto;
+  margin: 0 auto;
   width: 75%;
-
 }
-.button{
+
+.button {
   /*display: inline-block;*/
-  margin:0 auto;
+  margin: 0 auto;
   width: 200px;
-
-
 }
 
-#message{
+#message {
   height: 100%;
   width: 100%;
-  text-align:center;
+  text-align: center;
   font-size: 30px;
   color: white;
   text-shadow: 3px 3px 5px red;
   padding-top: 100px;
 }
 
-#answers{
+#answers {
   font-size: 30px;
   text-align: center;
-    color: white;
+  color: white;
 }
-.scoreBoard{
 
+.scoreBoard {
   width: 200px;
   background-color: yellow
 }
-.p1score .p2score{
+
+.p1score .p2score {
   height: 100%;
   width: 50%;
 }
-#p1score{
+
+#p1score {
   background-color: silver;
 }
-#p2score{
+
+#p2score {
   background-color: gold;
 }
-li{
-  margin:0 auto;
-  color:BLACK;
+
+li {
+  margin: 0 auto;
+  color: BLACK;
   border: 1px solid black;
   width: 40%;
   background-color: white;
 }
-li:hover{
+
+li:hover {
   background-color: green;
 }
-ul{
+
+ul {
   list-style-type: none;
   text-align: center;
 }
