@@ -252,7 +252,8 @@ function startGame() {
 
   //$('#gameBoard').css("background-image", "url(imgs/PressStart.jpg)");
 
-  messageBox("Welcome to You Guess It!");
+  messageBox("Welcome to You Guessed It");
+  // $('#youGuessedIt').text("You Guessed It");
   questionBox(" Please choose Start Game!");
   $('#gameBoard').css("background-color", "blue");
 
@@ -273,6 +274,7 @@ function questionBox(ques) {
 function messageBox(msg) {
 
   $('#message').text(msg);
+  $('#youGuessedIt').text("You Guessed It")
 }
 
 ///////////working with start button
@@ -319,7 +321,7 @@ function newGame() {
     catagoryChoice($mathQuestion);
   });
 
-  $('#answers').append('<div id="fthBox" class="difficultybox">Smarter than a 5th Grader</div>');
+  $('#answers').append('<div id="fthBox" class="difficultybox">Random</div>');
   $('#fthBox').css("background-color", "#e8e8e8");
   $('#fthBox').css("height", "100px");
   $('#fthBox').css("width", "200px");
@@ -400,7 +402,7 @@ function newGame() {
   function whoWon() {
 
     //score = $('#p1score').txt;
-    if ($score > 10) {
+    if ($score > 15) {
       messageBox("Congrats you won!!")
       $('#bigBoard').css("height", "500px")
       $('#bigBoard').css("background-image", "url(imgs/we-have-a-winner.png)")
@@ -413,396 +415,10 @@ function newGame() {
     if ($wrongAnswer === 5) {
       messageBox("You Failed")
       $('#bigBoard').css("height", "500px")
-      $('#bigBoard').css("background-image", "url(imgs/loserimg.jpg)")
+      $('#bigBoard').css("background-image", "url(imgs/loserimg.jpg)", "background-size", "100% 100%")
       $('ul').hide()
       $('#gameBoard').remove();
       alert("it overrrrrrr");
     }
   }
 }
-  // ////////////////////.......................mathQ
-  // function mathQ(){
-  //
-  //   var currentQuestion = $mathQuestion.splice(Math.floor(Math.random() * $mathQuestion.length), 1)[0];
-  //   var $ul = $('<ul>');
-  //
-  //
-  // $('#message').text("")
-  // questionBox(currentQuestion.question)
-  //   //messageBox(currentQuestion.question)
-  //     // $('#answers').text("")
-  //   $('#answers').append($ul)
-  //
-  //   $ul.append('<li>' + currentQuestion.a + '</li>')
-  //   $ul.append('<li>' + currentQuestion.b+ '</li>')
-  //   $ul.append('<li>' + currentQuestion.c+ '</li>')
-  //   $ul.append('<li>' + currentQuestion.d+ '</li>')
-  //
-  //
-  // $('li').click( function(){
-  //    //whoWon();
-  //    $clickedAnswer = $(this).text()
-  //    if($clickedAnswer === currentQuestion[currentQuestion.answer]){
-  //
-  //      messageBox("Correct, next Question in 5 seconds");
-  //
-  //     // $('#bigBoard').css("background-image", ("url(imgs/correct3.png)"))
-  //     setTimeout(function(){
-  //        sportsQ()
-  //     }, 5000);
-  //       $score++;
-  //         whoWon();
-  //       $('#p1score').text("Player 1 Score:" + $score);
-  //
-  //  }
-  //   else if($clickedAnswer !== currentQuestion[currentQuestion.answer]){
-  //     whoWon();
-  //     messageBox("Nope, next Question in 5 second ")
-  //     questionBox("The Correct Answer is : "+ currentQuestion[currentQuestion.answer])
-  //
-  //     $wrongAnswer++;
-  //     whoWon();
-  //     setTimeout(function(){
-  //        sportsQ()
-  //     }, 5000);
-  //
-  //   }
-  //   else{
-  //     messageBox("Next Catagory in 3 seconds ")
-  //     questionBox("")
-  //
-  //
-  //     setTimeout(function(){
-  //        newGame()
-  //     }, 3000);
-  //
-  //   }
-  //
-  //
-  //
-  // })
-  //  }
-  //
-
-
-
-
-
-
-  //}
-  //////////////////////////////.......................... sports Questions
-  // function sportsQ(){
-  // if($sportsQuestion.length>1){
-  //   var currentQuestion = $sportsQuestion.splice(Math.floor(Math.random() * $sportsQuestion.length), 1)[0];
-  //   var $ul = $('<ul>');
-  // $('#message').text("")
-  // questionBox(currentQuestion.question)
-  //   //messageBox(currentQuestion.question)
-  //     // $('#answers').text("")
-  //   $('#answers').append($ul)
-  //
-  //   $ul.append('<li>' + currentQuestion.a + '</li>')
-  //   $ul.append('<li>' + currentQuestion.b+ '</li>')
-  //   $ul.append('<li>' + currentQuestion.c+ '</li>')
-  //   $ul.append('<li>' + currentQuestion.d+ '</li>')
-  //
-  //   $('li').click(function(){
-  //      //whoWon();
-  //      $clickedAnswer = $(this).text()
-  //      if($clickedAnswer === currentQuestion[currentQuestion.answer]){
-  //
-  //        messageBox("Correct, next Question in 3 seconds");
-  //
-  //       // $('#bigBoard').css("background-image", ("url(imgs/correct3.png)"))
-  //       setTimeout(function(){
-  //
-  //          sportsQ()
-  //       }, 3000);
-  //         $score++;
-  //           whoWon();
-  //         $('#p1score').text("Player 1 Score:" + $score);
-  //
-  //    }
-  //     else if($clickedAnswer !== currentQuestion[currentQuestion.answer]){
-  //       //whoWon();
-  //       messageBox("Nope, next Question in 3 second ")
-  //       questionBox("The Correct Answer is : "+ currentQuestion[currentQuestion.answer])
-  //       $wrongAnswer++ ;
-  //       whoWon();
-  //
-  //       setTimeout(function(){
-  //          sportsQ()
-  //       }, 3000);
-  //
-  //     }
-  //     else{
-  //       messageBox("Next Catagory in 3 seconds ")
-  //       questionBox("")
-  //
-  //
-  //       setTimeout(function(){
-  //          newGame()
-  //       }, 3000);
-  //
-  //     }
-  //
-  //
-  //
-  //   })
-  // }
-  // if($sportsQuestion.length<1){
-  // alert("jeoijfowowgowgho")
-  //
-  // }
-  // }
-  // ////////////////////.......................mathQ
-  // function mathQ(){
-  //
-  //   var currentQuestion = $mathQuestion.splice(Math.floor(Math.random() * $mathQuestion.length), 1)[0];
-  //   var $ul = $('<ul>');
-  //
-  //
-  // $('#message').text("")
-  // questionBox(currentQuestion.question)
-  //   //messageBox(currentQuestion.question)
-  //     // $('#answers').text("")
-  //   $('#answers').append($ul)
-  //
-  //   $ul.append('<li>' + currentQuestion.a + '</li>')
-  //   $ul.append('<li>' + currentQuestion.b+ '</li>')
-  //   $ul.append('<li>' + currentQuestion.c+ '</li>')
-  //   $ul.append('<li>' + currentQuestion.d+ '</li>')
-  //
-  //
-  // $('li').click( function(){
-  //    //whoWon();
-  //    $clickedAnswer = $(this).text()
-  //    if($clickedAnswer === currentQuestion[currentQuestion.answer]){
-  //
-  //      messageBox("Correct, next Question in 5 seconds");
-  //
-  //     // $('#bigBoard').css("background-image", ("url(imgs/correct3.png)"))
-  //     setTimeout(function(){
-  //        sportsQ()
-  //     }, 5000);
-  //       $score++;
-  //         whoWon();
-  //       $('#p1score').text("Player 1 Score:" + $score);
-  //
-  //  }
-  //   else if($clickedAnswer !== currentQuestion[currentQuestion.answer]){
-  //     whoWon();
-  //     messageBox("Nope, next Question in 5 second ")
-  //     questionBox("The Correct Answer is : "+ currentQuestion[currentQuestion.answer])
-  //
-  //     $wrongAnswer++;
-  //     whoWon();
-  //     setTimeout(function(){
-  //        sportsQ()
-  //     }, 5000);
-  //
-  //   }
-  //   else{
-  //     messageBox("Next Catagory in 3 seconds ")
-  //     questionBox("")
-  //
-  //
-  //     setTimeout(function(){
-  //        newGame()
-  //     }, 3000);
-  //
-  //   }
-  //
-  //
-  //
-  // })
-  //  }
-
-  /////////////////funciton for correct answers
-
-
-
-
-  // timeer attempt
-  // function countdown(secs, elem){
-  //   var element = $('#elem')
-  //   element.innerHTML = secs;
-  //   secs--;
-  //   var timer = setTimeout('countdown('+secs+',"'+elem+')',1000);
-  //
-  //
-  //
-  // }
-  // $clickedAnswer = $(this).text()
-  // if($clickedAnswer === currentQuestion[currentQuestion.answer]){
-
-
-  // $('li').click(function() {
-  //       //Make each multiple choice item clickable and correct/incorrect//
-  //       $playerChoice = $(this).text()
-  //       if ($playerChoice === currentQuestion[currentQuestion.correct]) {
-  //         $alert.text("That's correct! You just got healthier!")
-  //         $score++
-  //         winGame()
-  //       } else {
-  //         $alert.text("That's not correct. One step closer to death.")
-  //         $score--
-  //         winGame()
-  //       }
-  //     })
-
-
-
-  // ///////////////////////////// creates chooseDifficulty
-  // function chooseDifficulty() {
-  //   setMessage("Please choose your difficulty")
-  //
-  //   $('.difficultyBoxH').show();
-  //   $('.difficultyBoxM').show();
-  //   $('.difficultyBoxE').show();
-  //
-  //   setQuestion("") // this works to change the text
-  //   $('.difficultyBoxH').css("background-color", "white").text("Hard")
-  //
-  //
-  //
-  //   $('.difficultyBoxM').css("background-color", "orange").text("Medium")
-  //
-  //
-  //   $('.difficultyBoxE').css("background-color", "blue").html("Easy")
-  //
-  //
-  //
-  //
-  //
-  //
-  // }
-  //
-  // //////////////////////////////// difficuty functions
-  // $('.difficultyBoxE').click(function setEasyQuestions() {
-  //
-  //
-  //   setMessage("Easy it is");
-  //
-  //   /// $('#divID').css("background-image", "url(/myimage.jpg)");
-  //
-  //   // $('quest')
-  //   $('.difficultyBoxH').css("background-color", "white").html("SUPER HEROES");
-  //   $('.difficultyBoxM').css("background-color", "white").text("javascript");
-  //   $('.difficultyBoxE').css("background-color", "white").html("SPORTS").click(setSportsQ);
-  //
-  //
-  //   $('#question').text("Please chooose a Catagory");
-  //   //var catagory = [ cat1, cat2, cat3]
-  //
-  //
-  // })
-  // /////////////////////////////// sportsQuestions
-  // function setSportsQ() {
-  //   setMessage("Question 1")
-  //
-  //
-  //   setQuestion(sportsQuestion1.question);
-  //   $('.difficultyBoxH').css("background-color", "white").text("C: " + sportsQuestion1.c);
-  //   $('.difficultyBoxM').css("background-color", "white").text("B: " + sportsQuestion1.b);
-  //   $('.difficultyBoxE').css("background-color", "white").text("A: " + sportsQuestion1.correct);
-  //   $('.difficultyBoxE').click(correctAnswer);
-  //   $('.difficultyBoxM').click(wrongAnswer);
-  //   $('.difficultyBoxH').click(wrongAnswer);
-  //
-  // }
-  // ///////////////////questtion 2
-  //
-  // function setSportsQ2() {
-  //   setMessage("Question 2")
-  //   $('#gameBoard').css("background-image", "none");
-  //
-  //
-  //
-  //   setQuestion(sportsQuestion2.question);
-  //   $('.difficultyBoxH').css("background-color", "white").text("C: " + sportsQuestion2.c);
-  //   $('.difficultyBoxM').css("background-color", "white").text("B: " + sportsQuestion2.b);
-  //   $('.difficultyBoxE').css("background-color", "white").text("A: " + sportsQuestion2.correct);
-  //
-  //   $('.difficultyBoxH').show()
-  //   $('.difficultyBoxM').show()
-  //   $('.difficultyBoxE').show()
-  //
-  //   $('.difficultyBoxE').click(wrongAnswer);
-  //   $('.difficultyBoxM').click(wrongAnswer);
-  //   $('.difficultyBoxH').click(correctAnswer);
-  //
-  // }
-  // /////////////// correct function
-  // function correctAnswer() {
-  //
-  //
-  //   setMessage("Correct")
-  //   setQuestion("")
-  //   $('.difficultyBoxH').hide()
-  //   $('.difficultyBoxM').hide()
-  //   $('.difficultyBoxE').hide()
-  //   $('#gameBoard').css("background-image", "url(imgs/correct1.jpeg)");
-  //
-  //   setTimeout(function() {
-  //     nextQuestion()
-  //   }, 3000);
-  //
-  // }
-  //
-  // /////////////////////////nextQuestion function
-  // function nextQuestion() {
-  //   $('#gameBoard').css("background-image", "none");
-  //   setMessage("Next Question in 5 seconds")
-  //   setTimeout(function() {
-  //
-  //     setSportsQ2()
-  //
-  //   }, 5000);
-  //
-  //
-  // }
-  //
-  // /////////////wrong answer
-  // function wrongAnswer() {
-  //
-  //
-  //   setMessage("Wrong")
-  //   setQuestion("")
-  //   $('.difficultyBoxH').hide()
-  //   $('.difficultyBoxM').hide()
-  //   $('.difficultyBoxE').hide()
-  //   $('#gameBoard').css("background-image", "url(imgs/incorrect3.jpg)");
-  //
-  //   setTimeout(function() {
-  //     nextQuestion()
-  //   }, 3000);
-  //
-  // }
-  //
-  // //////////////////////// sets message function
-  //
-  //
-  // function setMessage(msg) {
-  //
-  //   $('#message').text(msg);
-  // }
-
-  // //////////////////// creates hoover over buttons
-  // $('.button').hover(function() {
-  //   $(this).fadeOut(500).slideDown(500)
-  // });
-  //
-  //
-  // //////////////////////////creats click for both buttons reset and new game
-  // $('.button:first').click(function() {
-  //   $('#bigBoard').css("background-color", "black")
-  //
-  //
-  //
-  // });
-  //
-  // $('.button:last').click(function() {
-  //   startGame();
-  // });
-  //////////////////////////////////////////////////// Game LOGIX

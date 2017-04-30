@@ -1,52 +1,36 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="utf-8">
-
   <link rel="stylesheet" href="./css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Frijole" rel="stylesheet">
   <title>You Guess iT</title>
-
 </head>
-
 <body>
   <div id="intro">
-    <h1>You Guess it</h1>
+    <h1><span>You Guessed it</span></h1>
     <h2>Instructions</h2>
-    <p id="instructions">You Guessed It is a fun single player trivia game. The goal of You Guessed It is to get 15 questions correct, miss more than 5 and the game ends. The player has the ability to choose between multiple catagories of questions and in each catagory there are 10 questions. Each correct question is worth 1 point. If the player gets a question wrong a point will be added to the incorrect score.
+    <p id="instructions"><span>You Guessed it</span> is a fun single player trivia game. The goal of You Guessed It, is to get 15 questions correct, miss more than 5 and you lose. You have the ability to choose between various catagorie, and in each catagory there
+      are 10 questions. Each correct question is worth 1 point. For each wrong question, a point will be added to the "wrong question" score. Miss 5 questions in total and you lose the game.
     </p>
-    <div class="buttons">
+    <div id="menu-items">
+      <div class="buttons">
       <button class='button'>Start Game</button>
       <button class='button'>Reset</button>
-
+      </div>
+      <div class="scoreBoard">
+        <div id="p1score"></div>
+        <div id="wrongAnswer"></div>
+      </div>
     </div>
-    <div class="scoreBoard">
-      <div id="p1score"></div>
-      <div id="wrongAnswer"></div>
-    </div>
-  </div>
-  <div id="bigBoard" class="clear">
 
+  <div id="bigBoard" class="clearfix">
     <div id="message"> </div>
-
     <div id="gameBoard">
-
-
-      <!-- <div id="timer">hello</div> -->
       <div id="answers"></div>
-
-
-
-
-
     </div>
-
-
   </div>
-
   <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
-
   <script type="text/javascript" src="./js/app.js"></script>
 </body>
-
 </html>

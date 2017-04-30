@@ -1,5 +1,5 @@
 html {
-  background-color: #c7ced8;
+  /*background-color: #c7ced8;*/
 }
 
 img {
@@ -11,31 +11,40 @@ img {
   display: inline-block;
   border: 5px solid black;
 }
+#fthBox:visited{
+  color: gold;
+  padding-top
+}
+#sportBox:visited {
+  color: gold;
+}
 
 #sportBox:visited {
   color: gold;
 }
-#sportBox:visited {
-  color: gold;
-}
+
 .clearfix {
-   content: " "; /* Older browser do not support empty content */
-   display: block;
-   height: 0;
-   clear: both;
+  content: " ";
+  /* Older browser do not support empty content */
+  display: block;
+  height: 0;
+  clear: both;
 }
+
 #bigBoard {
   background-color: black;
   height: 100%;
   width: 75%;
   border: 2px solid black;
   margin: 0 auto;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 h1 {
-  color: white;
+  color: rgba(0,0,0,.3);
   text-align: center;
-  text-shadow: 3px 2px 1px #FF0000;
+  text-shadow: 3px 2px 1px black;
 }
 
 h2, p {
@@ -51,11 +60,11 @@ h2, p {
 }
 
 .buttons {
-  margin: 0 100px auto;
+  margin: 0 auto;
   width: 200px;
   background-color: #abebc6;
   border: 2px solid black;
-  float:left;
+  float: left;
 }
 
 #instructions {
@@ -67,12 +76,20 @@ h2, p {
 .button {
   width: 200px;
 }
-.scoreBoard {
 
-  margin: 0 auto;
-  width: 200px;
+.scoreBoard {
+  margin:;
+  width: 25%;
   background-color: #abebc6;
   border: 2px solid black;
+  float: right;
+}
+
+#menu-items{
+  margin:0 auto;
+  width: 75%;
+  height: 100%;
+  background-color: blue;
 }
 
 #message {
@@ -83,19 +100,20 @@ h2, p {
   color: white;
   text-shadow: 3px 3px 5px black;
   padding-top: 100px;
+  background-color: #d8ecf3;
 }
 
 #answers {
   font-size: 30px;
   text-align: center;
   color: white;
+  padding-bottom: 100px;
+  background-color: #d8ecf3;
 }
 
 #p1score {
   background-color: silver;
 }
-
-
 
 li {
   margin: 0 auto;
@@ -109,7 +127,18 @@ li:hover {
   background-color: #abebc6;
 }
 
+/*removing the stying from the list of answers*/
 ul {
   list-style-type: none;
   text-align: center;
+}
+
+/*changing the font for "You Guessed It."*/
+#messagebox, span{
+  font-family: 'Frijole', cursive;
+}
+#youGuessedIt{
+  color: black;
+  display: inline;
+  background-color: #d8ecf3;
 }
