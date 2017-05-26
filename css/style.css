@@ -1,5 +1,9 @@
 html {
   /*background-color: #c7ced8;*/
+    background: linear-gradient(white, white , white, white, white, white,white, white, white, #262626); /* Standard syntax */
+    background-position: cover;
+    height: 100%;
+    font-family: "calibri";
 }
 
 img {
@@ -60,11 +64,10 @@ h2, p {
 }
 
 .buttons {
-  margin: 0 auto;
   width: 200px;
   background-color: #abebc6;
-  border: 2px solid black;
-  float: left;
+
+
 }
 
 #instructions {
@@ -74,22 +77,21 @@ h2, p {
 }
 
 .button {
-  width: 200px;
+  width: 100%;
 }
 
 .scoreBoard {
-  margin:;
+
   width: 25%;
   background-color: #abebc6;
   border: 2px solid black;
-  float: right;
 }
 
 #menu-items{
-  margin:0 auto;
+
   width: 75%;
   height: 100%;
-  background-color: blue;
+
 }
 
 #message {
@@ -97,16 +99,17 @@ h2, p {
   width: 100%;
   text-align: center;
   font-size: 30px;
-  color: white;
-  text-shadow: 3px 3px 5px black;
+  color: black;
+  text-shadow: 3px 3px 5px #abebc6;
   padding-top: 100px;
+  /*padding-bottom:20px;*/
   background-color: #d8ecf3;
 }
 
 #answers {
   font-size: 30px;
   text-align: center;
-  color: white;
+  color: black;
   padding-bottom: 100px;
   background-color: #d8ecf3;
 }
@@ -117,7 +120,7 @@ h2, p {
 
 li {
   margin: 0 auto;
-  color: BLACK;
+  color: black;
   border: 1px solid black;
   width: 40%;
   background-color: white;
@@ -127,13 +130,12 @@ li:hover {
   background-color: #abebc6;
 }
 
-/*removing the stying from the list of answers*/
 ul {
   list-style-type: none;
   text-align: center;
 }
 
-/*changing the font for "You Guessed It."*/
+/*changing the font for titles*/
 #messagebox, span{
   font-family: 'Frijole', cursive;
 }
